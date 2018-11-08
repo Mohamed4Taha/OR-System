@@ -39,7 +39,6 @@ client.on('message', msg => {
       }
     });
 
-	    
 client.on('message', msg => {
     if (msg.content === 'الشعار') {
        msg.reply('**=Game Play : ๖ۣۜǾŘ༻ | Your Name**');
