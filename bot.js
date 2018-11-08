@@ -33,6 +33,11 @@ client.login(process.env.BOT_TOKEN);
 
 
 
+client.on('message', msg => {
+    if (msg.content === 'برب') {
+       msg.reply('**_تيت ي عسڵ , ڵٱ تطوڵ :broken_heart: _**');
+      }
+    });
 
 client.on('message', msg => {
     if (msg.content === 'السلام عليكم') {
@@ -87,6 +92,8 @@ client.on('message', msg => {
            msg.reply('هايات');
           }
         });
+
+
 
 //الترحيب
 
@@ -466,7 +473,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "يمنع النشر في هذا السيرفر",
         footer: {
-          text: "محمد طه"
+          text: "ده مش سيرفر للنشر"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
