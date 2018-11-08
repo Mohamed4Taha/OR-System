@@ -4,7 +4,7 @@ const prefix = ' '
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Nogawm`,"http://twitch.tv/S-F")
+client.user.setGame(`OR Server`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -135,7 +135,7 @@ client.on('guildMemberAdd', member => {
         .setColor('RED')
         .setFooter(`====اهلا السيرفر نور بيك و الله====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
     
-    var channel =member.guild.channels.find('name', 'welcome')
+    var channel =member.guild.channels.find('name', '♚chat')
     if (!channel) return;
     channel.send({embed : embed});
 
@@ -163,7 +163,7 @@ client.on("guildMemberAdd", member => {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField('مصمم  + صاحب البوت ',`★мohme𝕯★| ProG🌹#4476 و W͈̪̣AR NI̴̧͝GH̴̵T͇ | RG🌹#4506`)
+.addField('! OR |♚abdrabo , $7 kk💎♚`)
 .setColor('#027aff')
   message.channel.sendEmbed(embed);
     }
