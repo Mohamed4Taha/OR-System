@@ -32,13 +32,6 @@ client.login(process.env.BOT_TOKEN);
 
 
 
-
-client.on('message', msg => {
-    if (msg.content === 'الشعار') {
-       msg.reply('**=Discord : - OR | Your Name**');
-      }
-    });
-
 client.on('message', msg => {
     if (msg.content === 'الشعار') {
        msg.reply('**=Game Play : ๖ۣۜǾŘ༻ | Your Name**');
