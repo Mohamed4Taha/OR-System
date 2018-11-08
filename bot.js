@@ -35,7 +35,7 @@ client.login(process.env.BOT_TOKEN);
 
 client.on('message', msg => {
     if (msg.content === 'برب') {
-       msg.reply('**_تيت ي عسڵ , ڵٱ تطوڵ :broken_heart: _**');
+       msg.reply('**تيت ي عسڵ , ڵٱ تطوڵ :broken_heart: **');
       }
     });
 
