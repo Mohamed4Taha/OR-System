@@ -35,10 +35,18 @@ client.login(process.env.BOT_TOKEN);
 
 client.on('message', msg => {
     if (msg.content === 'الشعار') {
-       msg.reply('**=Discord : - OR | Your Name        ...        =Game Play : ๖ۣۜǾŘ༻ | Your Name**');
+       msg.reply('**=Discord : - OR | Your Name**');
       }
     });
 
+	    
+client.on('message', msg => {
+    if (msg.content === 'الشعار') {
+       msg.reply('**=Game Play : ๖ۣۜǾŘ༻ | Your Name**');
+      }
+    });
+	    
+	    
 client.on('message', msg => {
     if (msg.content === 'برب') {
        msg.reply('**تيت ي عسڵ , ڵٱ تطوڵ :broken_heart: **');
