@@ -4,7 +4,7 @@ const prefix = ' '
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`OR Server`,"http://twitch.tv/S-F")
+client.user.setGame(`Nogawm`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -32,18 +32,7 @@ client.login(process.env.BOT_TOKEN);
 
 
 
-client.on('message', msg => {
-    if (msg.content === 'الشعار') {
-       msg.reply('**=Game Play : ๖ۣۜǾŘ༻ | Your Name**');
-      }
-    });
-	    
-	    
-client.on('message', msg => {
-    if (msg.content === 'برب') {
-       msg.reply('**تيت ي عسڵ , ڵٱ تطوڵ :broken_heart: **');
-      }
-    });
+
 
 client.on('message', msg => {
     if (msg.content === 'السلام عليكم') {
@@ -59,7 +48,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === 'باك') {
-       msg.reply(':revolving_hearts: وّلّلّّكّكّممّّ نورت ي مز،من زمان عنك');
+       msg.reply('ولكم باك');
       }
     });
 
@@ -99,12 +88,10 @@ client.on('message', msg => {
           }
         });
 
-
-
 //الترحيب
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', '♚chat');
+    let channel = member.guild.channels.find('name', 'welcome');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
@@ -135,7 +122,7 @@ client.on('guildMemberAdd', member => {
         .setColor('RED')
         .setFooter(`====اهلا السيرفر نور بيك و الله====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
     
-    var channel =member.guild.channels.find('name', '♚chat')
+    var channel =member.guild.channels.find('name', 'welcome')
     if (!channel) return;
     channel.send({embed : embed});
 
@@ -163,7 +150,7 @@ client.on("guildMemberAdd", member => {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField('============================`)
+.addField('مصمم  + صاحب البوت ',`★мohme𝕯★| ProG🌹#4476 و W͈̪̣AR NI̴̧͝GH̴̵T͇ | RG🌹#4506`)
 .setColor('#027aff')
   message.channel.sendEmbed(embed);
     }
@@ -174,19 +161,26 @@ client.on("guildMemberAdd", member => {
 
 //حذف الشات
 
-client.on('message', message => {       
-if (message.content.startsWith('مسح')) { //xRGRx .. By FIVE STARS
-    if(!message.channel.guild) return message.reply('⛔ | This Command For Servers Only!'); 
-        if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send('⛔ | You dont have **MANAGE_MESSAGES** Permission!');
-        if(!message.guild.member(client.user).hasPermission('MANAGE_MESSAGES')) return message.channel.send('⛔ | I dont have **MANAGE_MESSAGES** Permission!');
- let args = message.content.split(" ").slice(1)
-    let messagecount = parseInt(args);
-    if (args > 1000) return message.reply("**🛑 || يجب ان يكون عدد المسح أقل من 1000 .**").then(messages => messages.delete(5000))
-    if(!messagecount) args = '1000';
-    message.channel.fetchMessages({limit: messagecount + 1}).then(messages => message.channel.bulkDelete(messages));
-    message.channel.send(`\`${args}\` : __عدد الرسائل التي تم مسحها __ `).then(messages => messages.delete(5000));
-  }
-});
+client.on("message", message => { //clear
+              var args = message.content.substring(prefix.length).split(" ");
+              if (message.content.startsWith("مسح")) {
+                  if(!message.channel.guild) return message.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
+     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**⚠  لا يوجد لديك صلاحية لمسح الشات**');
+          var msg;
+          msg = parseInt();
+        
+        message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
+        message.channel.sendMessage("", {embed: {
+          title: "``تــم مسح الشات ``",
+          color: 0x5016f3, 
+          footer: {
+            
+          }
+        }}).then(msg => {msg.delete(3000)});
+                            }
+  
+       
+  });
 
 
 
@@ -479,7 +473,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "يمنع النشر في هذا السيرفر",
         footer: {
-          text: "ده مش سيرفر للنشر"
+          text: "محمد طه"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -535,7 +529,7 @@ client.on('message', async message =>{
 
 client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("name", "♚「 OR ,」");
+   var role = member.guild.roles.find ("name", "Member");
    member.addRole (role);
   
 })
