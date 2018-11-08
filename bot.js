@@ -163,7 +163,7 @@ client.on("guildMemberAdd", member => {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField('! OR |♚abdrabo , $7 kk💎♚`)
+.addField('============================`)
 .setColor('#027aff')
   message.channel.sendEmbed(embed);
     }
