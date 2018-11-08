@@ -53,7 +53,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === 'باك') {
-       msg.reply('ولكم باك');
+       msg.reply(':revolving_hearts: وّلّلّّكّكّممّّ نورت ي مز،من زمان عنك');
       }
     });
 
